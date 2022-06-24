@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 50%;
+    background-color: var(--Very-Dark-Blue);
+    height: 100%;
+}
+@media (max-width: 767px) {
+    :root {
+        background-image: url(../images/bg-mobile.png);
+        background-size: 100%;
+    }
+}
+.attribution {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+}
+.left {
+    width: 270px;
+    height: 160px;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px;
+    border-top-right-radius: 70px;
+    padding: 20px;
+}
+@media (max-width: 767px) {
+    .left {
+        width: 280px;
+    }
+}
+.left .logo {
+    height: 35px;
+    margin: 10px 5px 25px;
+}
+@media (max-width: 767px) {
+    .left .logo {
+        margin: 10px 20px 25px;
+    }
+}
+
+.content img {
+    padding: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: var(--Very-Dark-Blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+@media (max-width:  767px) {
+    .content img {
+        margin-left: 10px;
+    }
+}
+.right {
+    width: 470px;
+    height: 135px;
+    border-radius: 10px;
+    background-color: var(--Dark-Blue);
+    margin-left: 25px;
+    margin-top: 25px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .right {
+        width: 280px;
+        height: 145px;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+.right:before {
+    content: "";
+    position: absolute;
+    right: 29px;
+    top: -6px;
+    width: 0;
+    height: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-color: white transparent transparent;
+    transform: rotate(87deg);
+}
+@media (max-width: 767px) {
+    .right::before {
+        display: none;
+    }
+}
+.free {
+    position: absolute;
+    right: 30px;
+    top: -40px;
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: var(--Grayish-Blue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .free {
+        padding: 15px 20px;
+        right: 75px;
+        top: 115px;
+    }
+}
+.free span {
+    display: inline-block;
+    font-size: 30px;
+    color: var(--Very-Dark-Blue);
+    font-weight: bold;
+    margin: 0 5px;
+}
+.right p {
+    color: var(--Grayish-Blue);
+    margin-top: 35px;
+    margin-left: 30px;
+    font-size: 13px;
+}
+.right p span {
+    color: var(--Pale-Blue);
+    font-size: 15px;
+    font-weight: bold;
+}
+.bar {
+    width: 390px;
+    height: 10px;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-left: 35px;
+    background-image: linear-gradient( to right, hsl(6, 100%, 80%) 1%, hsl(335, 100%, 65%) 70%, var(--Very-Dark-Blue) 80%);
+}
+@media (max-width: 767px) {
+    .bar {
+        width: 220px;
+        height: 12px;
+        margin-left: 30px;
+    background-image: linear-gradient( to right, hsl(6, 100%, 80%) 1%, hsl(335, 100%, 65%) 65%, var(--Very-Dark-Blue) 70%);
+    }
+}
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 70%;
+}
+@media (max-width: 767px) {
+    .circle {
+        left: 60%;
+    }
+}
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--Pale-Blue);
+    font-size: 12px;
+    font-weight: bold;
+}
+.zero {
+    margin-left: 30px;
+}
+.thousand {
+    margin-right: 40px;
+}
